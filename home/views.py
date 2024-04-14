@@ -10,6 +10,6 @@ from django.template import loader
 
 #Rendering an HTML page | Template
 
-def index(request):
+def indexView(request):
     template =loader.get_template('index.html')
     return HttpResponse(template.render())
