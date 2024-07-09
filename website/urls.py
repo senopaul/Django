@@ -21,7 +21,8 @@ from home.views import indexView
 from aboutus.views import aboutusView
 from ContactUs.views import ContactUsView
 from Accounts.views import AccountsView
-from blog.views import blogView
+from blog.views import blogView #,addContact,updateContact,deleteContact
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     # path('',include('home.urls')),
@@ -31,5 +32,9 @@ urlpatterns = [
     path('contactus/',ContactUsView,name='contactsUs'),
     path('accounts/',AccountsView,name='Accounts'),
     path('blog/',blogView,name='blog'),
+    path('admin/', admin.site.urls, name='admin'),
+    path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
+    
+    
     
 ]

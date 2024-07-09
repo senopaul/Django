@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'ContactUs',
     'blog',
     'Accounts',
+    'crispy_forms',
     
 ]
 
@@ -134,3 +135,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
+#Specifying where the login form is located should
+LOGIN_URL = 'login'
